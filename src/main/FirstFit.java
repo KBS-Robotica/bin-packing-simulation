@@ -4,20 +4,20 @@ import java.util.ArrayList;
 
 import static src.main.Main.MAX_WEIGHT;
 
-public class NextFit {
+public class FirstFit {
     public ArrayList<ArrayList<Integer>> runAlgorithm(ArrayList<Integer> weights) {
         ArrayList<ArrayList<Integer>> boxes = new ArrayList<>();
         boxes.add(new ArrayList<>());
 
         weights.forEach((weight) -> {
-            ArrayList<Integer> currentBox = boxes.get(boxes.size() -1);
-            int currentBoxWeight = Utils.calculateSum(currentBox);
+            boxes.forEach((box) -> {
+                int currentBoxWeight = Utils.calculateSum(box);
 
-            if (currentBoxWeight + weight >  MAX_WEIGHT) {
-                boxes.add(new ArrayList<>(weight));
-            } else {
-                currentBox.add(weight);
-            }
+                if (currentBoxWeight + weight >  MAX_WEIGHT) {
+                } else {
+                    box.add(weight);
+                }
+            });
         });
 
         return boxes;
