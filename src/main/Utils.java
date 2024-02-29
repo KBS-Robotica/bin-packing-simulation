@@ -2,10 +2,8 @@ package src.main;
 
 import java.util.ArrayList;
 
-public class Main {
-    static int MAX_WEIGHT = 9;
-
-    public static void main(String[] args) {
+public class Utils {
+    public ArrayList<Integer> GetRandomWeights(){
         ArrayList<Integer> weights = new ArrayList<Integer>();
         weights.add(9);
         weights.add(3);
@@ -16,11 +14,16 @@ public class Main {
         weights.add(3);
         weights.add(9);
         weights.add(3);
-
-        System.out.printf(
-                "Next Fit Dozen Aantal: %s%n",
-                new NextFit().nextFitTest(weights).size());
-
     }
 
+    public static int calculateSum(ArrayList<Integer> list) {
+        int sum = 0;
+
+        // Loop door de ArrayList en tel elk element op
+        for (int value : list) {
+            sum += value;
+        }
+
+        return sum;
+    }
 }
