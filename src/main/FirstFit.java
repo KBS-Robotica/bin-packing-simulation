@@ -14,9 +14,7 @@ public class NextFit {
             int currentBoxWeight = Utils.calculateSum(currentBox);
 
             if (currentBoxWeight + weight >  MAX_WEIGHT) {
-                ArrayList<Integer> newBox = new ArrayList<>();
-                newBox.add(weight);
-                boxes.add(newBox);
+                boxes.add(new ArrayList<>(weight));
             } else {
                 currentBox.add(weight);
             }
