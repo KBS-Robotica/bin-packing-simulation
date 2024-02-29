@@ -12,10 +12,10 @@ public class Main {
         NextFit testAlgorithm = new NextFit();
 
         for (int tests = 0; tests < testAmount; tests++){
-            totalBoxes += testAlgorithm.nextFitTest(Utils.GetRandomWeights()).size();
+            totalBoxes += testAlgorithm.runAlgorithm(Utils.GetRandomWeights()).size();
         }
 
-        float averageBoxes = totalBoxes / testAmount;
+        float averageBoxes = (float) totalBoxes / testAmount;
         float averageSpaceWasted = MAX_WEIGHT - averageBoxes;
 
         System.out.printf("Next Fit gemiddeld aantal dozen: %s%n", averageBoxes);

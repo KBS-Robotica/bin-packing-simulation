@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import static src.main.Main.MAX_WEIGHT;
 
 public class NextFit {
-    public ArrayList<ArrayList<Integer>> nextFitTest(ArrayList<Integer> weights) {
+    public ArrayList<ArrayList<Integer>> runAlgorithm(ArrayList<Integer> weights) {
         ArrayList<ArrayList<Integer>> boxes = new ArrayList<>();
         boxes.add(new ArrayList<>());
 

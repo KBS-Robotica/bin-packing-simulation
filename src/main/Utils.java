@@ -19,19 +19,6 @@ public class Utils {
         Collections.shuffle(weights);
 
         return weights;
-
-public class Utils {
-    public ArrayList<Integer> GetRandomWeights(){
-        ArrayList<Integer> weights = new ArrayList<Integer>();
-        weights.add(9);
-        weights.add(3);
-        weights.add(6);
-        weights.add(6);
-        weights.add(9);
-        weights.add(6);
-        weights.add(3);
-        weights.add(9);
-        weights.add(3);
     }
 
     public static int calculateSum(ArrayList<Integer> list) {
