@@ -14,7 +14,9 @@ public class Main {
 
         Utils.TestAlgorithm("Next fit", new NextFit(), false);
         Utils.TestAlgorithm("First fit", new FirstFit(), false);
+        Utils.TestAlgorithm("Best fit", new BestFit(), false);
         Utils.TestAlgorithm("First fit <", new FirstFit(), true);
+        Utils.TestAlgorithm("Best fit <", new BestFit(), true);
 
         System.out.format("+-----------------+-------+-------+%n");
     }
