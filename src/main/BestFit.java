@@ -27,6 +27,9 @@ public class BestFit extends Algorithm{
             //boxes.stream().filter((box) -> Utils.calculateSum(box) + weight <= MAX_WEIGHT).;
 
             for (ArrayList<Integer> box : boxes) {
+            Integer bestBoxIndex = null;
+            for (int i = 0; i < boxes.size(); i++) {
+                ArrayList<Integer> box = boxes.get(i);
 =======
             Integer bestBoxIndex = null;
             for (int i = 0; i < boxes.size(); i++) {
