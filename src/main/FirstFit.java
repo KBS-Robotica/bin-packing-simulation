@@ -6,15 +6,16 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import static src.main.Main.MAX_WEIGHT;
 
-public class FirstFit {
-        public ArrayList<ArrayList<Integer>> runAlgorithm(ArrayList<Integer> weights, boolean decreasing) {
-            if (decreasing) {
-                weights.sort(Collections.reverseOrder());
-            }
-            return runAlgorithm(weights);
+public class FirstFit extends Algorithm {
+    @Override
+    public ArrayList<ArrayList<Integer>> runAlgorithm(ArrayList<Integer> weights, boolean decreasing) {
+        if (decreasing) {
+            weights.sort(Collections.reverseOrder());
         }
-
-        public ArrayList<ArrayList<Integer>> runAlgorithm(ArrayList<Integer> weights) {
+        return runAlgorithm(weights);
+    }
+    @Override
+    public ArrayList<ArrayList<Integer>> runAlgorithm(ArrayList<Integer> weights) {
         ArrayList<ArrayList<Integer>> boxes = new ArrayList<>();
         boxes.add(new ArrayList<>());
 

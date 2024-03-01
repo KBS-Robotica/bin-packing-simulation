@@ -31,4 +31,25 @@ public class Utils {
 
         return sum;
     }
+
+    public static void TestAlgorithm(String algorithmName, Algorithm testAlgorithm, boolean decreasing){
+        int totalBoxes = 0;
+        int totalSpaceWasted = 0;
+        int testAmount = 10;
+
+        for (int tests = 0; tests < testAmount; tests++){
+            ArrayList<ArrayList<Integer>> results = testAlgorithm.runAlgorithm(Utils.GetRandomWeights(), decreasing);
+
+            for (ArrayList<Integer> result : results) {
+                totalSpaceWasted += (Main.MAX_WEIGHT - Utils.calculateSum(result));
+            }
+
+            totalBoxes += results.size();
+        }
+
+        float averageBoxes = (float) totalBoxes / testAmount;
+        float averageSpaceWasted = (float) totalSpaceWasted / testAmount;
+
+        System.out.format(Main.leftAlignFormat, algorithmName, averageBoxes, averageSpaceWasted);
+    }
 }

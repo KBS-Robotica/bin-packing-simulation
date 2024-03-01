@@ -1,11 +1,4 @@
 
-out/production/bin-packing-simulation/bin-packing-simulation.iml
-out/production/bin-packing-simulation/.idea/vcs.xml
-out/production/bin-packing-simulation/.idea/modules.xml
-out/production/bin-packing-simulation/.idea/misc.xml
+out
 .idea
 bin-packing-simulation.iml
-out/production/bin-packing-simulation/README.md
-out/production/bin-packing-simulation/src/main/Main.class
-out/production/bin-packing-simulation/src/main/NextFit.class
-out/production/bin-packing-simulation/src/main/Utils.class
