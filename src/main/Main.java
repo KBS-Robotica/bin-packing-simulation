@@ -11,8 +11,20 @@ public class Main {
         int totalBoxes = 0;
         int totalSpaceWasted = 0;
 
-        NextFit testAlgorithm = new NextFit();
+        FirstFit testAlgorithm = new FirstFit();
 
+//        ArrayList<Integer> weights = new ArrayList<Integer>();
+//        weights.add(9);
+//        weights.add(3);
+//        weights.add(6);
+//        weights.add(6);
+//        weights.add(9);
+//        weights.add(6);
+//        weights.add(3);
+//        weights.add(9);
+//        weights.add(3);
+
+//        System.out.println(testAlgorithm.runAlgorithm(weights));
         for (int tests = 0; tests < testAmount; tests++){
             ArrayList<ArrayList<Integer>> results = testAlgorithm.runAlgorithm(Utils.GetRandomWeights());
 
