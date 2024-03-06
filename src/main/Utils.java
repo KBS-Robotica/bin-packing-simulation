@@ -3,6 +3,9 @@ package src.main;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static src.main.Main.LEFT_ALIGN_FORMAT;
+import static src.main.Main.TEST_AMOUNT;
+
 public class Utils {
     public static ArrayList<Integer> GetRandomWeights(){
         ArrayList<Integer> weights = new ArrayList<Integer>();
@@ -35,9 +38,8 @@ public class Utils {
     public static void TestAlgorithm(String algorithmName, Algorithm testAlgorithm, boolean decreasing){
         int totalBoxes = 0;
         int totalSpaceWasted = 0;
-        int testAmount = 10;
 
-        for (int tests = 0; tests < testAmount; tests++){
+        for (int tests = 0; tests < TEST_AMOUNT; tests++){
             ArrayList<ArrayList<Integer>> results = testAlgorithm.runAlgorithm(Utils.GetRandomWeights(), decreasing);
 
             for (ArrayList<Integer> result : results) {
@@ -47,9 +49,9 @@ public class Utils {
             totalBoxes += results.size();
         }
 
-        float averageBoxes = (float) totalBoxes / testAmount;
-        float averageSpaceWasted = (float) totalSpaceWasted / testAmount;
+        float averageBoxes = (float) totalBoxes / TEST_AMOUNT;
+        float averageSpaceWasted = (float) totalSpaceWasted / TEST_AMOUNT;
 
-        System.out.format(Main.leftAlignFormat, algorithmName, averageBoxes, averageSpaceWasted);
+        System.out.format(LEFT_ALIGN_FORMAT, algorithmName, averageBoxes, averageSpaceWasted);
     }
 }
